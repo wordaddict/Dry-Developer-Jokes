@@ -13,10 +13,11 @@ export class AppComponent implements OnInit {
   constructor(
     private appService :AppService
   ){
-    this.delayApi(); 
+
   }
 
   ngOnInit(){
+   this.delayApi(); 
     this.getJokes();
 
   }
@@ -24,7 +25,7 @@ export class AppComponent implements OnInit {
   delayApi(){
     setTimeout(() => {
       this.loader = false;
-    }, 5000);
+    }, 1000);
   }
 
   getJokes() {
